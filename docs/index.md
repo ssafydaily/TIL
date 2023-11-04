@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "TIL"
   text: "algorithm, python, html, css, javascript, Vuejs, ..."
-  tagline: My great project tagline
+  tagline: 태그들
   actions:
     - theme: brand
       text: Markdown Examples
@@ -15,11 +15,11 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Python
+    details: 파이썬 언어 이해하기
+  - title: Javascript
+    details: about modern javascript langauge
+  - title: Vuejs3
+    details: to composition API, pinia, ....
 ---
 

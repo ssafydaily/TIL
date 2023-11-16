@@ -8,18 +8,18 @@ hero:
   tagline: 태그들
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Vuejs
+      link: /vuejs
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: DRF
+      link: /drf
 
 features:
   - title: Python
-    details: 파이썬 언어 이해하기
+    details: 파이썬으로 코딩하기
   - title: Javascript
-    details: about modern javascript langauge
+    details: JS 기본, DOM
   - title: Vuejs3
-    details: to composition API, pinia, ....
+    details: SPA, SFC, 상태 관리, 라우터, ...
 ---
 

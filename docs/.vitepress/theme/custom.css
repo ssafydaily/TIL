@@ -1,0 +1,9 @@
+/* .vitepress/theme/custom.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Source+Code+Pro&display=swap');
+
+
+:root {
+  --vp-font-family-base: 'Noto Sans KR', sans-serif;    /* normal text font */
+  --vp-font-family-mono: 'Source Code Pro', monospace;  /* code font */
+}

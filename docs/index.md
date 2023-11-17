@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Vuejs
-      link: /vuejs
+      link: /vuejs/
     - theme: alt
       text: DRF
-      link: /drf
+      link: /drf/
 
 features:
   - title: Python

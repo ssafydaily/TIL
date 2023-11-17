@@ -6,4 +6,8 @@
 :root {
   --vp-font-family-base: 'Noto Sans KR', sans-serif;    /* normal text font */
   --vp-font-family-mono: 'Source Code Pro', monospace;  /* code font */
+  --vp-code-line-height: 1.7;
+  --vp-code-font-size: 1rem;  
+  --vp-custom-block-font-size: 18px;
+  --vp-custom-block-code-font-size: 16px;
 }

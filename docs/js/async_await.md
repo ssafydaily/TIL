@@ -40,7 +40,7 @@ async function f() {
 f();
 ```
 
-::: warning 
+::: tip 
 - `await` 는 최상위 레벨 코드에서 동작하지 않는다.
 - `await` 는 **`thenable`** 객체를 받는다
 

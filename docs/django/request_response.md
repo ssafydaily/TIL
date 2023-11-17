@@ -23,6 +23,6 @@ return render(request, 'index.html', context)
 - 장고 템플릿 파일의 `<img>` 태그에서 다음과 같이 처리
 
 
-```django
+```html
 <img src="data:image/png;base64,{{ image }}>
 ```

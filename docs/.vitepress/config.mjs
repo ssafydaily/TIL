@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import { sidebar } from './sidebar/sidebar.mjs'
+import { nav } from './sidebar/nav.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,29 +9,10 @@ export default defineConfig({
   description: "algorithm, python, html, css, javascript, Vuejs, ...",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Vuejs', link: '/vuejs/' },
-      { text: 'DRF', link: '/drf/' }
-    ],
+    
+    nav,
 
-    sidebar: {
-      '/drf/': {
-        text: 'DRF',
-        collapsed: true,
-        items: [
-          { text: '소개', link: '/drf/' },          
-        ]
-      },
-      '/vuejs/': {
-        text: 'Vue',
-        collapsed: true,
-        items: [
-          { text: '소개', link: '/vuejs/' },          
-          { text: 'Youtube 검색', link: '/vuejs/youtube_axios' }
-        ]
-      }
-    },
+    sidebar,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
@@ -38,6 +21,10 @@ export default defineConfig({
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-JongYun'
-    }  
+    },
+
+    search: {
+      provider: 'local'
+    }
   }
 })

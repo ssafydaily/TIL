@@ -32,7 +32,7 @@
 
 ### cors 패키지 설치
 
-- [참고_사이트](:https://github.com/adamchainz/django-cors-headers) 
+- [참고_사이트](https://github.com/adamchainz/django-cors-headers) 
 
 ```bash
 pip install django-cors-headers

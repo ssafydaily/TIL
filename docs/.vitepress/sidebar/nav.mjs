@@ -4,4 +4,5 @@ export const nav = [
   { text: 'DRF', link: '/drf/' },
   { text: 'JS', link: '/js/' },
   { text: 'Vuejs', link: '/vuejs/' },
+  { text: 'PJT', link: '/examples/' },
 ]

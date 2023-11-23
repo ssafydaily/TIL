@@ -21,3 +21,10 @@
   --vp-c-sponsor: #fd1d7c;
 }
 
+h1 {
+  color: crimson;
+  font-weight: bold;
+}
+.vp-doc :not(pre) > code {
+  font-weight: bold;
+}

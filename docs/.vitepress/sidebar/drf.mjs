@@ -4,6 +4,7 @@ export const drf = {
     collapsed: true,
     items: [
       { text: '소개', link: '/drf/' },          
+      { text: '인증', link: '/drf/dj-rest-auth' },          
     ]
   },
 }

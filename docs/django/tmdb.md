@@ -31,7 +31,7 @@ class Movie(models.Model):
 ```
 
 ### 장르 데이터 저장하기
-- `API_KEY`는 **tmdb** 의 자신의 `api_key` 작성
+- `API_KEY`는 **tmdb** 에서 발급받은 `api_key` 작성
 
 ```python
 # views.py

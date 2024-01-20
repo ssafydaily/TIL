@@ -1,3 +1,11 @@
+const data = {
+  text: '데이터 처리',
+  items: [
+    { text: 'Numpy', link: '/python/21_numpy.md'},
+    { text: 'Pandans', link: '/python/31_pandas.md'},
+    { text: 'Matplot', link: '/python/41_matplot.md'},
+  ]
+}
 export const python = {
   '/python/': {
     text: 'Python',
@@ -5,6 +13,7 @@ export const python = {
     items: [
       { text: '소개', link: '/python/' },        
       { text: '자료형', link: '/python/01_data_type.md' },              
+      data,
     ]
   }
 }

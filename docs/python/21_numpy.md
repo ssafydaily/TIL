@@ -1,11 +1,10 @@
 # NumPy
 
-[[toc]]
-----------
-
+:::tip 특징
 - **NumPy(`Numerical Python`)** 는 과학 및 공학 분야에서 활용되는 오픈 소스 파이썬 라이브러리
 - 다차원 배열 맻 행렬 자료 구조 포함
 - `Pandas`, `SciPy`, `Matplotlib` 등의 데이터 과학 및 과학 파이썬 패키지에서 널리 사용
+:::
 
 ## 설치 
 
@@ -13,7 +12,7 @@
 pip install nunpy
 ```
 
-- `NumPy` 임포트
+- `NumPy` 가져오기
 ```python
 import numpy as np
 ```
@@ -52,13 +51,13 @@ print(arr.shape)    # (2, 2, 2)
 
 ## 배열 생성
 
-- 리스트를 사용
+- `np.array()` : 리스트에서 생성
 ```python
 import numpy as np
 arr = np.array([1, 2, 3])
 ```
 
-- `0` 또는 `1` 로 초기화
+- `np.zeors()`, `np.ones()` : `0` 또는 `1` 로 초기화
 ```python
 arr = np.zeros(2)
 # array([0., 0.])
@@ -67,7 +66,7 @@ arr = np.ones((2, 3))
 # arr([[1., 1., 1.],[1., 1., 1.]])
 ```
 
-- `np.arange(start, stop, step)` 활용
+- `np.arange(start, stop, step)` 
 
 ```python
 np.arange(4)          # array([0, 1, 2, 3])
@@ -80,32 +79,68 @@ np.linspace(0, 10, num=5) # array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 np.ones(2, dtype=np.int64)  # array([1, 1])
 ```
 
-## 요소 추가, 삭제, 정렬
+- 기본 데이터 유형은 부동 소수점(`np.float64`), 원하는 데이터 유형을 명시적으로 지정할 수 있음.
+```python
+x = np.ones(2, dtype=np.int64)  # array([1, 1])
+```
 
-- `np.sort()` 함수를 사용해서, 축, 종류, 순서를 지정
-- 정렬된 복사본을 반환
+- `np.full((x축, y축), 값)` : 특정 값으로 초기화된 배열 생성
+```python
+arr = np.full((3, 4), 0.11)
+print(arr)
+# [[0.11 0.11 0.11 0.11]
+#  [0.11 0.11 0.11 0.11]
+#  [0.11 0.11 0.11 0.11]]
+```
+- `np.linspace(시작, 끝, 구간내에서 숫자의 개수)` : 일정 간격의 숫자 생성
+```python
+arr = np.linspace(-5, 5, 10)
+print(arr)
+
+# [-5.         -3.88888889 -2.77777778 -1.66666667 -0.55555556  0.55555556
+#   1.66666667  2.77777778  3.88888889  5.        ]
+```
+
+- `np.random.rand(개수)`, `np.random.rand(x축, y축)`: 랜덤 값으로 초기화
+```python
+arr = np.random.rand(5)
+arr = np.random.rand(2, 3)
+
+```
+
+- 원하는 범위 내에서 랜덤 정수 값 생성
+```python
+# np.random.randint(범위, size=개수)
+arr = np.random.randint(5, size=10)
+```
+
+## 요소 추가, 삭제 및 정렬
+
+- `np.sort()` 를 사용해서 정렬 => 정렬된 복사본을 반환
+- 축, 종류, 순서를 지정할 수 있음
 
 ```python
 arr = np.array([2, 1, 5, 3, 7, 4, 6, 8])
 print(np.sort(arr))
-print(arr)
+print(arr)          # array([1, 2, 3, 4, 5, 6, 7, 8])
 ```
 
 - 배열 연결
 ```python
-a = np.array([1, 2, 3, 4])
-b = np.array([5, 6, 7, 8])
-np.concatenate((a, b))
-# array([1, 2, 3, 4, 5, 6, 7, 8])
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[5, 6]])
+np.concatenate((a, b), axis=0)
+# array([[1, 2],
+#        [3, 4],
+#        [5, 6]])
 
-x = np.array([[1, 2], [3, 4]])
-y = np.array([[5, 6]])
-np.concatenate((x, y), axis=0)
-'''
-array([[1, 2],
-       [3, 4],
-       [5, 6]])
-'''
+np.concatenate((a, b.T), axis=1)
+# array([[1, 2, 5],
+#        [3, 4, 6]])
+
+
+np.concatenate((a, b), axis=None)
+# array([1, 2, 3, 4, 5, 6])
 ```
 
 ## 배열의 모양과 크기
@@ -267,21 +302,21 @@ print(np.hsplit(x, 3))
 ```
 
 - `view` 메서드를 사용해서 원본 배열과 동일한 데이터를 보는 새 배열 개체를 생성(**얕은 복사본**)
-- `copy` 메서도는 **깊은 복사본** 생성
+- `copy` 메서드는 **깊은 복사본** 생성
 
 :::tip 참고
-  - 배열 스태킹과 분할 [<Badge type="tip" text="link" vertical="middle"/>](https://numpy.org/doc/stable/user/quickstart.html#quickstart-stacking-arrays)
+  - 배열 스태킹과 분할 [<Badge type="danger" text="link" vertical="middle"/>](https://numpy.org/doc/stable/user/quickstart.html#quickstart-stacking-arrays)
 
-  - copy & view [<Badge type="tip" text="link" vertical="middle"/>](https://numpy.org/doc/stable/user/quickstart.html#quickstart-copies-and-views)
+  - copy & view [<Badge type="danger" text="link" vertical="middle"/>](https://numpy.org/doc/stable/user/quickstart.html#quickstart-copies-and-views)
 ::: 
 
-## Broadcast [<Badge type="tip" text="link" vertical="middle"/>](https://numpy.org/doc/stable/user/basics.broadcasting.html#basics-broadcasting)
+## Broadcast [<Badge type="danger" text="link" vertical="middle"/>](https://numpy.org/doc/stable/user/basics.broadcasting.html#basics-broadcasting)
 
 - 배열과 단일 숫자 간 연산(벡터와 스칼라 간 연산) 또는 크기가 다른 두 배열 간에 연산을 수행해야 하는 경우
 - 두 배열의 차원이 같거나 둘 중 하나가 1인 경우 배열의 차원이 호환되야 함
   - 차원이 호환되지 않으면 `ValueError` 발생
 
-## CSV 파일에서 읽기
+## CSV 파일에서 읽기 [<Badge type="danger" text="link" vertical="middle"/>](https://numpy.org/doc/stable/user/how-to-io.html)
 
 - 빠진 값들이 없다면 `numpy.loadtxt`, 그렇지 않으면 `numpy.getfromtxt`
 

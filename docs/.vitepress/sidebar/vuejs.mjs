@@ -18,6 +18,7 @@ const vuejs = {
     collapsed: true,
     items: [
       { text: '소개', link: '/vuejs/' },          
+      { text: 'Provide/inject', link: '/vuejs/provide_inject' },          
       { text: '이미지 업로드', link: '/vuejs/image_upload' },
       { text: 'Youtube 검색', link: '/vuejs/youtube_axios' },
       vueRouter,

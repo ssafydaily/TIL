@@ -6,6 +6,7 @@ const vueWithDjango = {
     { text: 'tmdb', link: '/examples/tmdb' },        
     { text: 'dj-rest-auth', link: '/examples/dj_rest' },        
     { text: 'jwt', link: '/examples/jwt' },        
+    { text: 'jwt', link: '/examples/custom_registration' },        
   ]
 }
 

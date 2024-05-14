@@ -5,8 +5,8 @@ const vueWithDjango = {
     { text: 'pagination', link: '/examples/pagination' },        
     { text: 'tmdb', link: '/examples/tmdb' },        
     { text: 'dj-rest-auth', link: '/examples/dj_rest' },        
+    { text: 'Custom User', link: '/examples/custom_registration' },        
     { text: 'jwt', link: '/examples/jwt' },        
-    { text: 'jwt', link: '/examples/custom_registration' },        
   ]
 }
 

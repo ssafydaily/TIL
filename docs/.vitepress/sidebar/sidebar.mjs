@@ -5,6 +5,8 @@ import { javascript } from './javscript.mjs'
 import { pjt } from './pjt.mjs'
 import { python } from './python.mjs'
 import { css } from './css.mjs'
+import { react } from './react'
+
 export const sidebar = {
   ...css,
   ...python,
@@ -12,6 +14,7 @@ export const sidebar = {
   ...drf,
   ...javascript,
   ...vuejs,
+  ...react,
   ...pjt,
 }
 

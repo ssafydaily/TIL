@@ -1,10 +1,28 @@
 export const nav = [
   { text: 'Home', link: '/' },
-  { text: 'CSS', link: '/css/' },
-  { text: 'Python', link: '/python/' },
-  { text: 'Django', link: '/django/' },
-  { text: 'DRF', link: '/drf/' },
-  { text: 'JS', link: '/js/' },
-  { text: 'Vuejs', link: '/vuejs/' },
+  { text: 'Lang.',
+    items: [
+      { text: 'Python', link: '/python/' },
+      { text: 'Java', link: '/java/' },
+    ]
+  },
+  { text: 'Web', 
+    items: [
+      { text: 'CSS', link: '/css/' },
+      { text: 'JS', link: '/js/' },
+    ]
+  },
+  { text: 'BACK-END', 
+    items: [
+      { text: 'Django', link: '/django/' },
+      { text: 'DRF', link: '/drf/' },      
+    ]
+  },
+  { text: 'FRONT-END', 
+    items: [
+      { text: 'Vuejs', link: '/vuejs/'},
+      { text: 'React', link: '/react/'},
+    ]
+  },
   { text: 'PJT', link: '/examples/' },
 ]

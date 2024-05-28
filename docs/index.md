@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "TIL"
-  text: "algorithm, python, html, css, javascript, Vuejs, ..."
+  text: "algorithms, coding..."
   tagline: 태그들
   actions:
     - theme: brand
@@ -17,9 +17,12 @@ hero:
 features:
   - title: Python
     details: 파이썬으로 코딩하기
+    link: /python/
   - title: Javascript
     details: JS 기본, DOM
+    link: /js/
   - title: Vuejs3
     details: SPA, SFC, 상태 관리, 라우터, ...
+    link: /vuejs/
 ---
 

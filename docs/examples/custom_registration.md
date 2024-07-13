@@ -19,7 +19,7 @@ class User(AbstractUser):
     age = models.PositiveIntegerField()
     occupation = models.CharField(max_length=50)
 ```
-> - `settings.py` 에 'AUTH_USER_MODEL' 로 등록하고 `makemigration` 과 `migrate` 실행
+- `settings.py` 에 'AUTH_USER_MODEL' 로 등록하고 `makemigration` 과 `migrate` 실행
 
 ## Serializer 정의
 

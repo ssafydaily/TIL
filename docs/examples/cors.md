@@ -12,7 +12,8 @@
 
 <img src="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/cors_principle.png" alt="cors" style="zoom: 70%;" />
 
-> 그림 출처 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/cors_principle.png
+> 그림 출처 
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/cors_principle.png
 
 ## why CORS?
 

@@ -36,7 +36,7 @@ f = open('파일경로(file_path)', 'r')
 
 
 ::: details examples
-@[code](./codes/10_02_readtext.py)
+<<< @/python/codes/10_02_readtext.py
 :::
 
 ### write file
@@ -45,15 +45,15 @@ f = open('파일경로(file_path)', 'w')
 f.write('hello\n')      # 문자열을 쓰고, 문자열의 크기를 반환
 ```
 ::: details examples
-@[code](./codes/10_03_writetext.py)
+<<< @/python/codes/10_03_writetext.py
 :::
 
 ### read line-by-line
 
-@[code](./codes/10_04_readline_by_line.py)
+<<< @/python/codes/10_04_readline_by_line.py
 
 ::: details line 단위로 파일 복사하기
-@[code](./codes/10_04_readline_and_write.py) 
+<<< @/python/codes/10_04_readline_and_write.py
 :::
 
 ## Json 
@@ -109,7 +109,7 @@ finally:
 
 - 다음은 간단한 *파일 읽기* 예제이다.
 
-@[code](./codes/10_01_with.py)
+<<< @/python/codes/10_01_with.py
 
 - 파일 객체를 다룰 때 with 키워드를 사용하는 것은 좋은 습관이다.
 - 실행중에 예외가 발생하더라도 SUITE가 종료될 때 파일이 정상적으로 닫힌다.

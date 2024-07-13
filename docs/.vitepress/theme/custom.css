@@ -35,5 +35,5 @@ h1 {
 .vp-doc strong,
 strong {
   font-weight: bolder;  
-  color: var(--vp-c-green-2);
+  color: var(--vp-c-red-2);
 }

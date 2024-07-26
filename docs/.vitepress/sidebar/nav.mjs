@@ -6,10 +6,10 @@ export const nav = [
       { text: 'Java', link: '/java/' },
     ]
   },
-  { text: 'Web', 
+  { text: 'Algo.', 
     items: [
-      { text: 'CSS', link: '/css/' },
-      { text: 'JS', link: '/js/' },
+      { text: 'Intro.', link: '/algo/' },
+      { text: 'Basic', link: '/algo/basic/' },      
     ]
   },
   { text: 'BACK-END', 
@@ -20,6 +20,8 @@ export const nav = [
   },
   { text: 'FRONT-END', 
     items: [
+      { text: 'CSS', link: '/css/' },
+      { text: 'JS', link: '/js/' },
       { text: 'Vuejs', link: '/vuejs/'},
       { text: 'React', link: '/react/'},
     ]

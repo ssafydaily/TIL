@@ -11,6 +11,7 @@ export const javascript = {
       { text: '모듈', link: '/js/module' },          
       { text: '옵셔널 체이닝', link: '/js/opt_chain' },          
       { text: 'setTimeout/setInterval', link: '/js/set_time_interval' },          
+      { text: 'Promise', link: '/js/promise' },          
       { text: '정렬', link: '/js/sorting' },          
       { text: 'this', link: '/js/this' },                
     ]

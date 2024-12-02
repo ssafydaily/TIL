@@ -52,33 +52,13 @@ observer.observe(targetElement)
       position: fixed;
       top: 50vh;
     }
-    </style>
-  <hr>
+  </style>
+
+  <hr>  
   <div class="box"></div>
-  <script src="index.js"></script><style>
-    body {
-      height: 3000px;
-    }
-    .red {
-      background-color: crimson;
-    }
-    .box {
-      border: 1px solid black;
-      width: 200px;
-      height: 100px;
-      position: relative;
-      top: 1000px;
-    }
-    hr {
-      width: 100%;
-      position: fixed;
-      top: 50vh;
-    }
-    </style>
-  <hr>
-  <div class="box"></div>
-  <script src="index.js"></script>
+
 ```
+- **javascript** 코드
 ```js
 const targetElement = document.querySelector('.box')
 console.log(targetElement)
@@ -147,9 +127,6 @@ observer.observe(sppiner)
 ```
 
 ```html
-<h1>Intersection Observer</h1>
-<hr>
-<div id="container"></div>
 <style>
   .item {
     height: 3rem;
@@ -162,4 +139,10 @@ observer.observe(sppiner)
     margin-top: 0.5rem;
   }
 </style>
+
+<!-- -->
+<h1>Intersection Observer</h1>
+<hr>
+<div id="container"></div>
+
 ```

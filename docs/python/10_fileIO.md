@@ -58,11 +58,23 @@ f.write('hello\n')      # 문자열을 쓰고, 문자열의 크기를 반환
 
 ## Json 
 
-## Pathlib
+- 복잡한 데이터형을 파일에 저장하기 위해, 파이썬은 **JSON**(JavaScript Object Notation) 이라는 데이터 교환 형식을 사용 
+- `json` 이라는 표준 모듈은 파이썬 데이터 계층을 받아서 문자열 표현으로 변환 
+- 이 과정을 **직렬화** (serializing) 라고 하고, 문자열 표현으로부터 데이터를 재구성하는 것을 **역 직렬화** (deserializing) 라고 부른다
+- 직렬화와 역 직렬화 사이에서, 객체를 표현하는 문자열은 파일이나 데이터에 저장되거나 네트워크 연결을 통해 전송될 수 있다
 
-### 문자열로 파일경로를 처리할 경우
 
-## Directory
+```python
+# 객체 x를 JSON 문자열로 변환하는 코드
+
+import json
+x = [1, 'simple', 'list']
+json.dumps(x) # '[1, "simple", "list"]'
+```
+:::warning dump()/dumps()
+- `dump()` 함수는 객체를 파일에 쓰고, `dumps()` 함수는 객체를 문자열로 변환한다.
+- `load()` 함수는 파일에서 객체를 읽고, `loads()` 함수는 문자열에서 객체를 읽는다.
+:::
 
 
 ## with 문

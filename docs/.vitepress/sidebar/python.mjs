@@ -15,6 +15,7 @@ export const python = {
       { text: '소개', link: '/python/' },        
       { text: '자료형', link: '/python/01_data_type.md' },              
       { text: 'File I/O', link: '/python/10_fileIO.md' }, 
+      { text: 'Pathlib', link: '/python/11_pathlib.md' }, 
       { text: '내장 변수', link: '/python/12_main.md' }, 
       data,
     ]

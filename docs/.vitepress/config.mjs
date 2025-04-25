@@ -27,5 +27,7 @@ export default defineConfig({
       provider: 'local'
     }
   },
-
+  markdown: {
+    math: true
+  },
 })

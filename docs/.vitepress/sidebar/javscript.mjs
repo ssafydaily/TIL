@@ -14,6 +14,7 @@ export const javascript = {
       { text: 'Promise', link: '/js/promise' },          
       { text: '정렬', link: '/js/sorting' },          
       { text: 'this', link: '/js/this' },                
+      { text: 'Form', link: '/js/form' },                
     ]
   }
 }

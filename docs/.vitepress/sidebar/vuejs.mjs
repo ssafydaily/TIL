@@ -22,6 +22,7 @@ const vuejs = {
       { text: '이미지 업로드', link: '/vuejs/image_upload' },
       { text: 'Youtube 검색', link: '/vuejs/youtube_axios' },
       { text: 'vue + 모달', link: '/vuejs/bootstrap_modal' },
+      { text: 'watch와 ref객체 감시', link: '/vuejs/watch_source' },
       vueRouter,
       pinia,
     ]

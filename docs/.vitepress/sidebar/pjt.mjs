@@ -8,6 +8,7 @@ const vueWithDjango = {
     { text: 'Custom User', link: '/examples/custom_registration' },        
     { text: 'jwt', link: '/examples/jwt' },        
     { text: 'API 요청', link: '/examples/request_api.md' },        
+    { text: 'Kakao MAP API', link: '/examples/kakao.md' },        
   ]
 }
 

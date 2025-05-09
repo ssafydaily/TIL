@@ -1,6 +1,8 @@
 
 # `ref` 객체에 대한 `watch` 사용 방식 비교
 
+> ChatGpt의 도움.
+
 Vue.js에서 `ref` 객체를 감시할 때 `watch()`의 첫 번째 인자에 따라 감시 방식과 콜백 인자의 내용이 달라집니다. 아래는 `const user = ref({ name: '홍길동', age: 22 })`를 기준으로 한 세 가지 `watch()` 예제의 차이점입니다.
 
 
@@ -89,5 +91,5 @@ watch(() => user.value.age, (arg) => {
 
 ## ✅ 권장 사용 방식
 
-- **특정 속성만 감시할 경우** → `() => user.value.속성`
+- **특정 속성만 감시할 경우** → `watch(() => user.value.속성, ...)`
 - **객체 전체를 감시할 경우** → `watch(user, ..., { deep: true })`

@@ -1,4 +1,4 @@
-# Provie / inject
+# Provide / inject
 
 ## Prop drilling [<Badge type="tip" text="원문" vertical="middle"/>](https://vuejs.org/guide/components/provide-inject.html#prop-drilling)
 

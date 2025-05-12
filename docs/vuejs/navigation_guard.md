@@ -56,11 +56,31 @@ const routes = [
 ## 컴포넌트 가드
 - 특정 컴포넌트를 렌더링하는 경로가 변경되로 때 샐행
 - 해당 컴포넌트에 `beforeRouteUpdate()` 정의
-
+  - **Composition API** 방식일 때는 `onBeforeRouteUpdate((to, from) => {})` 사용
+  - [<Badge type="tip" text="공식 문서 보기" vertical="middle"/>](https://router.vuejs.kr/guide/advanced/composition-api.html)
 - `params` 의 변화를 감지하지 못하는 경우에 사용
-```js
+
+::: code-group
+
+```vue [Composition]
+<script setup>
+import { ref } from 'vue'
+import { onBeforeRouteUpdate  } from 'vue-router'
+
+const userName = ref('')
+
+onBeforeRouteUpdate((to, from) => {
+  // 이 컴포넌트가 보여지고 있는 동안 라우트가 변경됬지만, 이 컴포넌트가 새로운 라우트에서 재사용 될 때.
+  // 예를 들어, `/users/:id`라는 라우트에서 `/users/1`과 `/users/2` 사이를 이동할 때
+    
+  userName.value = to.params.userName
+})
+</script>
+```
+
+```js [Options]
 export default {
-  name: 'HelloView',
+  name: 'UserView',
   data : function(){
     return {
       userName : this.$route.params.userName
@@ -72,6 +92,7 @@ export default {
   }
 }
 ```
+:::
 
 ## 404 page
 

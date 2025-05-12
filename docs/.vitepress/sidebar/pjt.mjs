@@ -1,3 +1,11 @@
+const projectTools = {
+  text: '프로젝트 도구',
+  items: [    
+    { text: '소개', link: '/examples/' },
+    { text: '패키지와 npm', link: '/examples/tools/npm_package' },
+  ]
+}
+
 const vueWithDjango = {
   text: 'Vue + DRF',
   items: [    
@@ -16,8 +24,8 @@ export const pjt = {
   '/examples/': {
     text: '결합',
     collapsed: true,
-    items: [
-      { text: '소개', link: '/examples/' },      
+    items: [      
+      projectTools,
       vueWithDjango,    
     ]
   },

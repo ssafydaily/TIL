@@ -8,6 +8,7 @@ import { css } from './css.mjs'
 import { react } from './react.mjs'
 import { java } from './java.mjs'
 import { algo } from './algo.mjs'
+import { data } from './data.mjs'
 
 export const sidebar = {
   ...css,
@@ -20,5 +21,6 @@ export const sidebar = {
   ...pjt,
   ...java,
   ...algo,
+  ...data, 
 }
 

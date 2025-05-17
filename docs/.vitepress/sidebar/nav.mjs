@@ -26,5 +26,6 @@ export const nav = [
       { text: 'React', link: '/react/'},
     ]
   },
+  { text: 'DATA', link: '/data/' },
   { text: 'PJT', link: '/examples/' },
 ]

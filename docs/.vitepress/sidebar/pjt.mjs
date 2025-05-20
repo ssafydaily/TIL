@@ -10,10 +10,10 @@ const vueWithDjango = {
   text: 'Vue + DRF',
   items: [    
     { text: 'CORS', link: '/examples/cors' },        
-    { text: 'pagination', link: '/examples/pagination' },        
-    { text: 'tmdb', link: '/examples/tmdb' },        
     { text: 'dj-rest-auth', link: '/examples/dj_rest' },        
     { text: 'Custom User', link: '/examples/custom_registration' },        
+    { text: 'pagination', link: '/examples/pagination' },        
+    { text: 'tmdb', link: '/examples/tmdb' },        
     { text: 'jwt', link: '/examples/jwt' },        
     { text: 'API 요청', link: '/examples/request_api.md' },        
     { text: 'Kakao MAP API', link: '/examples/kakao.md' },        

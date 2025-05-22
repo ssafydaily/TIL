@@ -4,6 +4,12 @@ const pipeline = {
     { text: '소개', link: '/data/pipeline/00_intro.md' },        
   ]
 }
+const openai = {
+  text: 'open AI',
+  items: [
+    { text: '소개', link: '/data/openai/00_intro.md' },        
+  ]
+}
 export const data = {
   '/data/': {
     text: 'data',
@@ -11,6 +17,7 @@ export const data = {
     items: [
       { text: '소개', link: '/data/' },        
       pipeline,
+      openai,
     ]
   }
 }

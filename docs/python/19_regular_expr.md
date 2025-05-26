@@ -1,6 +1,14 @@
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+    Mounted at /content/drive
+
+
 # 정규 표현식
 
-## `[]`문자 - 메타 클래스
+## []문자 - 메타 클래스
 - `[`와 `]` 사이의 문자들과의 매치
 - `[abc]`라는 표현식의 의미는 a, b, c 중 한개의 문자와 매치를 뜻한다.
 - 두 문자 사잉; 하이픈(`-`)을 사용하면 두 문자 사이의 범위를 의미
@@ -18,7 +26,7 @@
 - `\w` : 문자+숫자(alphanumeric)와 매치, `[a-zA-Z0-9_]`와 동일한 표현
 - `\W` : 문자+숫자(alphanumeric)가 아닌 문자와 매치, `[^a-zA-Z0-9_]`와 동일
 
-## `.(dot)` 문자 - `\n` 제외 모든 문자
+## .(dot) 문자 - `\n` 제외 모든 문자
 - `a.b` : "a + 모든문자 + b"
   - a와 b라는 문자 사이에 어떤 문자가 들어가도 모두 매치된다는 의미
 
@@ -71,6 +79,7 @@ p = re.compile('[a-z]+')
 m = p.match('python')
 print(m)
 ```
+
     <re.Match object; span=(0, 6), match='python'>
 
 
@@ -213,7 +222,116 @@ for item in result:
 - MULTILINE(M) - 여러 줄과 매치될 수 있게 한다. ^, $ 메타 문자 사용과 관계 있는 옵션이다.
 - VERBOSE(X) - verbose 모드를 사용할 수 있게 한다. 정규식을 보기 편하게 만들 수 있고 주석 등을 사용할 수 있게 된다.
 
+## 문자열 소비가 없는 메타 문자
+- +, *, [], {} 등의 메타 문자는 매치가 성사되면 문자열을 탐색하는 시작 위치가 변경(소비된다고 표현)
+
+### `|`
+- or과 동일하 의미로 사용
+- `A|B` : A 또는 B라는 의미
+
+### `^`
+- 문자열의 맨 처음과 일치한다는 것을 의미
+- 컴파일 옵션 `re.MULTILINE`을 사용할 경우는 각 줄의 처음과 일치하게 됨
 
 ```python
+>>> print(re.search('^Life', 'Life is too short'))
+<re.Match object; span=(0, 4), match='Life'>
+>>> print(re.search('^Life', 'My Life'))
+None
+```
+
+### `$`
+- `^` 메타 문자의 반대로 문자열의 끝과 매치한다는 것을 의미
+```py
+>>> print(re.search('short$', 'Life is too short'))
+<re.Match object; span=(12, 17), match='short'>
+>>> print(re.search('short$', 'Life is too short, you need python'))
+None
+```
+### `\A`
+- 문자열의 처음과 매치된다는 것을 의미, ^ 메타 문자와 동일
+- `re.MULTILINE` 옵션을 사용할 경우 ^은 각 줄의 문자열의 처음과 매치되지만, \A는 줄과 상관없이 전체 문자열의 처음하고만 매치
+
+### `\Z`
+- 문자열의 끝과 매치된다는 것을 의미
+- `re.MULTILINE` 옵션을 사용할 경우, $ 메타 문자와는 달리 전체 문자열의 끝과 매치
+
+### `\b`
+- 단어 구분자(word boundary). 보통 화이트스페이스에 의해 구분
+
+```python
+>>> p = re.compile(r'\bclass\b')
+>>> print(p.search('no class at all'))  
+<re.Match object; span=(3, 8), match='class'>
+```
 
 ```
+>>> print(p.search('the declassified algorithm'))
+None
+```
+
+## 그룹
+- 그룹을 만들어 주는 메타 문자는 바로 ()
+- `(ok)+` : ok가 반복되는 패턴
+
+```python
+>>> p = re.compile('(ABC)+')
+>>> m = p.search('ABCABCABC OK?')
+>>> print(m)
+<re.Match object; span=(0, 9), match='ABCABCABC'>
+>>> print(m.group())
+ABCABCABC
+
+```
+
+- `\w+\s+\d+[-]\d+[-]\d+` 은 이름 + " " + 전화번호 형태의 문자열을 찾는 정규식
+
+```python
+>>> p = re.compile(r"(\w+)\s+(\d+[-]\d+[-]\d+)")
+>>> m = p.search("park 010-1234-1234")
+>>> print(m.group(2))
+010-1234-1234
+```
+
+### 그룹화된 문자열에 이름 붙이기
+- `(?P<그룹명>...)`
+```python
+>>> p = re.compile(r"(?P<name>\w+)\s+((\d+)[-]\d+[-]\d+)")
+>>> m = p.search("park 010-1234-1234")
+>>> print(m.group("name"))
+park
+```
+
+
+## 전방 탐색(lookahead search)
+- 긍정형 전방 탐색((?=expr)): **expr** 정규식과 매치되어야 하고, 문자열을 소비하지 않음.
+부정형 전방 탐색((?!expr)): **expr** 정규식과 매치되지 않으며, 문자열이 소비되지 않음.
+
+```python
+>>> p = re.compile(".+(?=:)")
+>>> m = p.search("http://google.com")
+>>> print(m.group())
+http
+```
+
+## 문자열 바꾸기
+
+- sub 메서드를 사용하면 정규식과 매치되는 부분을 다른 문자로 변경
+
+```python
+>>> p = re.compile('(blue|white|red)')
+>>> p.sub('colour', 'blue socks and red shoes')
+'colour socks and colour shoes'
+```
+
+### 참조 구문 사용
+
+- 다음은 `이름 + 전화번호` 의 문자열을 `전화번호 + 이름`으로 바꾼다
+- `\g<그룹_이름>` 을 사용하면 정규식의 그룹 이름을 참조 가능
+
+```python
+>>> p = re.compile(r"(?P<name>\w+)\s+(?P<phone>(\d+)[-]\d+[-]\d+)")
+>>> print(p.sub("\g<phone> \g<name>", "park 010-1234-1234"))
+010-1234-1234 park
+```
+

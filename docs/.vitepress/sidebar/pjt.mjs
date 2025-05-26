@@ -1,5 +1,6 @@
 const projectTools = {
   text: '프로젝트 도구',
+  collapsed: true,
   items: [    
     { text: '소개', link: '/examples/' },
     { text: '패키지와 npm', link: '/examples/tools/npm_package' },
@@ -8,6 +9,7 @@ const projectTools = {
 
 const vueWithDjango = {
   text: 'Vue + DRF',
+  collapsed: true,
   items: [    
     { text: 'CORS', link: '/examples/cors' },        
     { text: 'dj-rest-auth', link: '/examples/dj_rest' },        

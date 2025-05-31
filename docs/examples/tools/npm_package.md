@@ -1,4 +1,4 @@
-# Packages
+# npm & packages
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-#### Node.js 와 npm 설치하기
+### Node.js 와 npm 설치하기
 
 - 최신 버전 npm 설치하기
 
@@ -37,7 +37,7 @@ $ npm -v
 
 - `npm 레지스트리`는 패키지와 노드 모듈을 포함한다. 차이점과 이들이 어떻게 상호작용하는지 이해보자.
 
-#### 패키지(package)
+### 패키지(package)
 
 - **`package.json`**파일에 의해 표현되는 파일이나 디렉토리
 - 하나의 `패키지`는 반드시 하나의 `package.json` 파일을 포함해야 한다.
@@ -47,7 +47,7 @@ $ npm -v
 
 
 
-##### `패키지 형식`
+#### `패키지 형식`
 
 > 다음 형식 중에 하나
 >
@@ -65,7 +65,7 @@ $ npm -v
 >
 > g) 클론하는 경우 결과적으로 `a`가 되는  `git URL`
 
-##### `npm pacakge git URL 형식`
+#### `npm pacakge git URL 형식`
 
 - `git://github.com/user/project.git#commit-ish`
 - `git+ssh://user@hostname:project.git#commit-ish`
@@ -74,7 +74,7 @@ $ npm -v
 
 
 
-#### 모듈(modules)
+### 모듈(modules)
 
 - **Node.js `require()`** 함수에 의해 로드 가능한  `node_module` 디렉토리에 포함된 파일 또는 디렉토리
 - 모듈이 `require()`에 로드 가능하려면, 반드시 다음 중 한가지여야 한다.
@@ -90,7 +90,7 @@ var req = require('request')
 
 
 
-#### Scope
+### Scope
 
 - npm 버전 2 이상에서 범위(scope) 사용
 - 같은 이름의 패키지에 대한 충돌을 피하기 위한 이름 공간 제공
@@ -107,7 +107,7 @@ var req = require('request')
 @npmcorp/package-name
 ```
 
-##### scope & package visibility
+#### scope & package visibility
 
 - **범위가 없는** 패키지는 항상 **퍼블릭**하다.
   - 패키지 이름으로 참조 가능하다.
@@ -118,9 +118,9 @@ var req = require('request')
 
 -------
 
-#### Getting packages locally
+### Getting packages locally
 
-##### 범위없는 패키지 설치
+#### 범위없는 패키지 설치
 
 ```bash
 $ npm install <package_name>
@@ -133,19 +133,19 @@ $ npm install <package_name>
 > - `package.json`파일이 로컬 디렉토리에 없으면, 최신 버전을 설치
 > - 그렇지 않으면, 명시된  `semantic version rule` 을 만족하는 최신 버전을 설치
 
-##### 범위를 가지는 퍼블릭 패키지
+#### 범위를 가지는 퍼블릭 패키지
 
 ```bash
 $ npm install @scope/package-name
 ```
 
-##### install globally
+#### install globally
 
 ```bash
 $ npm install -g <package_name>
 ```
 
-#### Uinstalling Local pacakge
+### Uinstalling Local pacakge
 
 - 범위 없는 패키지
 
@@ -219,7 +219,7 @@ Your Name <email@example.com> (http://example.com)
 >
 > 3. 질문에 답을 한다.
 
-#### package-lock.json
+### package-lock.json
 
 - `package-lock.json` 파일은 `node_module` 트리 혹은 `package.json` 이 수정되면 자등으로 생성된다.
 
@@ -244,7 +244,7 @@ Your Name <email@example.com> (http://example.com)
 
 ## CLI Command
 
-#### npm-install
+### npm-install
 
 - 패키지(의존성을 가지는 패키지 포함)를 설치하는 명령
 - `package-lock` , `npm shrikwrap` 파일, `yarn-lock` 파일, 또는 그외 설치 의존성이 있을 경우 우선순위
@@ -313,7 +313,7 @@ A@0.1.0
 
 ## 실습 관련 패키지
 
-#### lodash
+### lodash
 
 ```bash
 $ npm i lodash
@@ -321,7 +321,7 @@ $ npm i lodash
 
 
 
-#### axios
+### axios
 
 ```bash
 $ npm i axios
@@ -329,7 +329,7 @@ $ npm i axios
 
 
 
-#### vuex-persistedstate
+### vuex-persistedstate
 
 - https://www.npmjs.com/package/vuex-persistedstate
 - install
@@ -340,7 +340,7 @@ $ npm install --save vuex-persistedstate
 
 
 
-#### django-cors-headers
+### django-cors-headers
 
 - https://github.com/adamchainz/django-cors-headers
 - install package

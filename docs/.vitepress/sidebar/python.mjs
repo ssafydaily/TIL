@@ -8,6 +8,7 @@ const lang = {
       { text: 'File I/O', link: '/python/10_fileIO.md' }, 
       { text: 'Pathlib', link: '/python/11_pathlib.md' },       
       { text: '내장 변수', link: '/python/12_main.md' }, 
+      { text: '타입 힌트', link: '/python/18_type_hint.md' }, 
       { text: '정규 표현식', link: '/python/19_regular_expr.md' }, 
   ]
 }

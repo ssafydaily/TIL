@@ -3,6 +3,8 @@ const projectTools = {
   collapsed: true,
   items: [    
     { text: '소개', link: '/examples/' },
+    { text: 'CLI', link: '/examples/tools/cli' },
+    { text: 'git', link: '/examples/tools/git' },
     { text: 'npm & 패키지', link: '/examples/tools/npm_package' },
     { text: 'gTTS', link: '/examples/tools/gtts' },
 

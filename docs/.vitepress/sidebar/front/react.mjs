@@ -4,12 +4,14 @@ const data = {
     
   ]
 }
+
+const reactRoot = '/front-end/react'
 export const react = {
-  '/react/': {
+  '/front-end/react/': {
     text: 'React',
     collapsed: true,
     items: [
-      { text: '소개', link: '/react/' },        
+      { text: '소개', link: `${reactRoot}/` },        
       // data,
     ]
   }

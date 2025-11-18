@@ -1,3 +1,9 @@
+import { frontNav } from './front/nav.mjs'
+import { backendNav } from './backend/nav.mjs'
+
+const langRoot = '/lang'
+const algoRoot = '/algo'
+
 export const nav = [
   { text: 'Home', link: '/' },
   { text: 'Lang.',
@@ -12,20 +18,10 @@ export const nav = [
       { text: 'Basic', link: '/algo/basic/' },      
     ]
   },
-  { text: 'BACK-END', 
-    items: [
-      { text: 'Django', link: '/django/' },
-      { text: 'DRF', link: '/drf/' },      
-    ]
-  },
-  { text: 'FRONT-END', 
-    items: [
-      { text: 'CSS', link: '/css/' },
-      { text: 'JS', link: '/js/' },
-      { text: 'Vuejs', link: '/vuejs/'},
-      { text: 'React', link: '/react/'},
-    ]
-  },
+  
+  backendNav,
+  frontNav,
+
   { text: 'DATA', link: '/data/' },
   { text: 'PJT', link: '/examples/' },
 ]

@@ -26,6 +26,17 @@ const vueWithDjango = {
   ]
 }
 
+
+const apiExamples = {
+  text: 'API-EXAM.',
+  collapsed: true,
+  items: [    
+    { text: 'wikipedia', link: '/examples/api_examples/wikipedia' },            
+    { text: 'tmdb', link: '/examples/api_examples/tmdb' },            
+    { text: 'etc', link: '/examples/api_examples/request_api' },            
+  ]
+}
+
 export const pjt = {
   '/examples/': {
     text: '결합',
@@ -33,6 +44,7 @@ export const pjt = {
     items: [      
       projectTools,
       vueWithDjango,    
+      apiExamples,
     ]
   },
 }

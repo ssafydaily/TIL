@@ -23,5 +23,5 @@ export const nav = [
   frontNav,
 
   { text: 'DATA', link: '/data/' },
-  { text: 'PJT', link: '/examples/' },
+  { text: 'ETC', link: '/examples/' },
 ]

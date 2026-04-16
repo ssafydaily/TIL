@@ -24,7 +24,7 @@ INSTALLED_APPS = [
 ]
 MIDDLEWARE = [
     ...,
-    'corsheaders.middleware.CorsMiddleware',  # 아래보다 위에 있어야 한다.
+    'corsheaders.middleware.CorsMiddleware',  # CommonMiddleware 위에 있어야 한다.
     'django.middleware.common.CommonMiddleware',
     ...,
 ]

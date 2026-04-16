@@ -72,7 +72,7 @@ MIDDLEWARE = [
 - 다음 중 최소 하나를 설정
   
   
-#### - `CORS_ALLOWED_ORIGINS: Sequenc[str]`
+#### - `CORS_ALLOWED_ORIGINS: Sequence[str]`
   
   ```python
   # settings.py

@@ -1,18 +1,24 @@
+const vueRoot = '/front-end/vuejs'
+
 const pinia = {
   text: 'pinia',
   items: [
-    {},
+    {text: 'Store', link: `${vueRoot}/pinia/01_store`},
+    {text: 'State', link: `${vueRoot}/pinia/02_state`},
+    {text: 'Getters', link: `${vueRoot}/pinia/03_getters`},
+    {text: 'Actions', link: `${vueRoot}/pinia/04_actions`},
+    {text: 'PLugins', link: `${vueRoot}/pinia/05_plugins`},
+    {text: '외부 Store', link: `${vueRoot}/pinia/06_outside`},
   ]
 }
 // -------------------------------------------
 const vueRouter = {
   text: 'vue-router',
   items: [
-    {text: '네이게이션 가드', link: '/vuejs/navigation_guard'}
+    {text: '네이게이션 가드', link: `${vueRoot}/navigation_guard`}
   ]
 }
 // -------------------------------------------
-const vueRoot = '/front-end/vuejs'
 const vuejs = {
   '/front-end/vuejs/': {
     text: 'Vue',

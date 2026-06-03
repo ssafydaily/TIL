@@ -7,8 +7,4 @@
 
 # ML / DL
 
-- [tensor](./51_tensor.md)
-- [pytorch](./61_torch.md)
-- [openCV](./81_cv.md)
-- [yolo](./91_yolo.md)
 

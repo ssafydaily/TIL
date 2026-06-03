@@ -6,7 +6,9 @@
 
 ::: tip
 - `auth.User` 를 사용자 정의 모델인 `accounts.User`로 변경해서 반영
-- [requirements.txt](./django_settings/requirements.txt) /  [settings.py](./django_settings/settings.py) /  [urls.py](./django_settings/urls.py) 
+- [requirements.txt](django_settings/requirements.txt) 
+- [settings.py]()
+- [urls.py]() 
 :::
 
 ## 설치
@@ -93,6 +95,7 @@ REST_FRAMEWORK = {
         # 'rest_framework.permissions.IsAuthenticated',
         'rest_framework.permissions.AllowAny',
     ],
+}
 ```
 
 - `decorator`

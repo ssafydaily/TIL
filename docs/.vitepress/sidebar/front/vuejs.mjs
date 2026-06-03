@@ -8,7 +8,6 @@ const pinia = {
     {text: 'Getters', link: `${vueRoot}/pinia/03_getters`},
     {text: 'Actions', link: `${vueRoot}/pinia/04_actions`},
     {text: 'PLugins', link: `${vueRoot}/pinia/05_plugins`},
-    {text: '외부 Store', link: `${vueRoot}/pinia/06_outside`},
   ]
 }
 // -------------------------------------------

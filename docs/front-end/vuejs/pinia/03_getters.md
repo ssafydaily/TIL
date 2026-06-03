@@ -61,19 +61,35 @@ const { getUserById } = storeToRefs(userList)
 </template>
 ```
 
-> - 함수를 반환하면 게터가 더 이상 캐시되지 않고, 단순히 호출하는 함수가 된다. 
-> - 게터 내부에서 일부 결과를 캐시하면 더 나은 성능을 얻을 수 있다.
-> ```js
-> export const useStore = defineStore('main', {
->   getters: {
->     getActiveUserById(state) {
->       const activeUsers = state.users.filter((user) => user.active)
->       return (userId) => activeUsers.find((user) => user.id === userId)
->     },
->   },
-> })
-> ```
+- 함수를 반환하면 게터가 더 이상 캐시되지 않고, 단순히 호출하는 함수가 된다. 
+- 게터 내부에서 일부 결과를 캐시하면 더 나은 성능을 얻을 수 있다.
+```js
+export const useStore = defineStore('main', {
+  getters: {
+    getActiveUserById(state) {
+      const activeUsers = state.users.filter((user) => user.active)
+      return (userId) => activeUsers.find((user) => user.id === userId)
+    },
+  },
+})
+```
 
+
+:::warning
+- 일반적인 Getter: 상태(State)가 변경될 때마다 값을 자동으로 계산하고 그 결과를 캐싱(Caching)
+- 함수를 반환하는 Getter: *Method Getter*라고 함. Getter가 함수를 반환하므로, 상태가 바뀌어도 자동으로 재계산되지 않는다.
+  - 사용자가 그 함수를 직접 호출하는 시점에만 실행(캐싱 기능 없음)
+- 반응형으로 하고 싶다면 함수 호출을 `computed` 내부에서 진행한다.
+```js
+import { computed } from 'vue'
+import { useUserStore } from './userStore'
+
+const userStore = useUserStore()
+
+// computed로 감싸주면 user.value는 반응형(RefImpl)이 됩니다!
+const user = computed(() => userStore.getUserById(1))
+```
+:::
 
 ## 다른 스토어의 게터에 접근하기
 
